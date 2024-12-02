@@ -1,4 +1,3 @@
-
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +7,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: url('https://img1.akspic.ru/attachments/crops/5/2/2/9/6/169225/169225-atmosfera-geometriya-krasochnost-svet-purpur-1440x2560.jpg') no-repeat center center fixed;
+            background: url('https://i.postimg.cc/6qrpM2b9/Picsart-24-12-02-20-38-34-469.png') no-repeat center center fixed;
             background-size: cover;
             color: white;
             display: flex;
@@ -26,16 +25,16 @@
             align-items: center;
         }
         .profile-container {
-            background-color: rgba(0,0,0,0.285);
+            background-color: rgba(0,0,0,0.789);
             padding: 20px;
             border-radius: 15px;
             text-align: center;
-            transition: transform 0.5s ease, opacity 0.5s ease; /* Yangi */
+            transition: transform 0.5s ease, opacity 0.5s ease;
             width: 100%;
-            opacity: 1; /* Yangi */
+            opacity: 1;
         }
         .profile-image img {
-            width: 100%;
+            width: 70%;
             border-radius: 15px;
         }
         .details {
@@ -71,15 +70,420 @@
             border-radius: 10px;
             display: none;
         }
+
+        /* 3D Matn */
+        .text-animation {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1aff10;
+            text-align: center;
+            opacity: 0; /* Dastlab ko'rsatilmasin */
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="announcement" id="announcement"></div>
+        <div class="text-animation" id="animatedText"></div>
         <div class="profile-container" id="profileContainer">
             <script>
+                const messages = [
+                    "Foydalanuvchilarga Salom! Bu erda sizga yangi e'lonlar tayyor turibdi!",
+                    "O'zaro xabarlar almashishdan qo'rqmang!",
+                    "Yangi elonlar kela boshladi, kuzatib boring!",
+                    "Bu yerda hamma narsa mavjud: qiziqarli odamlar va yangi imkoniyatlar!",
+                    "Keling, tanishamiz va uchrashamiz!"
+                ];
+
+                function typeText(text, element, delay) {
+                    let index = 0;
+                    
+                    function typeNextChar() {
+                        if (index < text.length) {
+                            element.textContent += text.charAt(index);
+                            index++;
+                            setTimeout(typeNextChar, delay);
+                        } else {
+                            // Matn yozilgandan so'ng uni ko'rsatamiz
+                            element.style.opacity = "1";
+                        }
+                    }
+                    
+                    typeNextChar();
+                }
+
+                document.addEventListener('DOMContentLoaded', () => {
+                    const animatedTextElement = document.getElementById('animatedText');
+                    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+                    typeText(randomMessage, animatedTextElement, 100); // Harf ketma-ketligi 100 ms
+                });
+
                 // Tasodifiy kontentni tanlash
                 const profiles = [
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/TwHjJPNN/Picsart-24-12-02-20-55-41-932.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 KELINLIKKA NOMZOD 💜  salom men 2005 yil qiz bola man turmushga chiqish uchun elon bergan man kuyovni manzilini farqi bor shu buxorolik bulsin eltimos</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/XvgpLsLD/Picsart-24-12-02-20-58-15-497.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 KELINLIKKA NOMZOD 💜  men 2004 yil ajrashgan man</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.pinimg.com/originals/29/07/a6/2907a62546ac0a944c050daaf89c8308.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 KELINLIKKA NOMZOD 💜  салом мен делрабо 1998 йил ажрашганаёл ман турмушга чикмокчиман киз бола ман майли ажрашишган буса хам тегишга рози ман менга ёзинг танишамиз кунгимдаги инсонимни излаябман</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/yYTDKV2r/Screenshot-20241202-102124-Instagram.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 #Келинликка_номзод 
+
+✅ 1.Ёши: 18
+✅ 2.Бўйи:165
+✅ 3.Вазни: 50
+✅ 4.Миллати: Tojik
+✅ 5.Турмушдаги холати: Ajrashgan nikoh qilib zakis Yoq 
+✅ 6.Фарзанди: yo
+✅ 7.Маълумоти: Oʻrta 
+✅ 8.Иш жойи: Germany 🇩🇪 
+✅ 9.Куёв учун ёш: Taqdir
+✅ 10.Яшаш манзили: Xozirda Germany 🇩🇪 ♥️ 
+Asli O'zbekiston Samarqand ❤️
+
+❗️Талаблар: ichmaydigon chikmaydigon taklifim ichki kuyovlikka so'rayman oilada bitta qiz man 🛫 </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/JnhfsQhk/Screenshot-20241202-094051-Instagram.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 #Келинликка_номзод 
+
+✅ 1.Ёши: 18
+✅ 2.Бўйи:1.68
+✅ 3.Вазни: 46
+✅ 4.Миллати: Узбек
+✅ 5.Турмушдаги холати: Ajrashgan nikoh qilib zakis Yoq ( Ko'p Yashamagan man 3 Kun yashadim
+✅ 6.Фарзанди: yo
+✅ 7.Маълумоти: Oʻrta 
+✅ 8.Иш жойи: Ishsiz
+✅ 9.Куёв учун ёш: Taqdir
+✅ 10.Яшаш манзили: jizzax zomin
+
+❗️Талаблар:Maqsadi oila qurish</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/90QnfPcn/Screenshot-20241121-212953-Instagram.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Салом менга бирга яшаб йуруш учун асбоби каттаро кучкор кирак албатта зор бусин тушакда мен кутаман жоним сизни албатта менга хабар ёзинг </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/7ZX6jwfM/Picsart-24-12-02-21-24-41-339.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 1998 йил ман ажрашган1 углим бор ёлгиз яшайман узимни уйим бор тошкентда мен хозир чет элда ишлайман бахтимни излаб элон бердим бекорга езиб мани безовта келманг элтимос</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/DypjybJS/Picsart-24-12-02-21-28-55-006.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 2007 yil man ismim Amina samarqand ishtixon tumanidan man ajrashgan 23 25 yoshdagi yigit busa erga tegishga rozi man sababi uydagilarim uyga sig'dirishmayabdi xar kuni janjal qilishayabdi akamni xotini bilan har kuni uyda janjallashib qolayab man eltimos manga uylaning </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/hPN6g35J/Picsart-24-12-02-21-32-25-674.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 salom man 2004 yil man ajrashgan ayol man turmushim uxshamadi erim ko'p ichib kelib man bilan janjal qilardi shu sababli ko'p urushdik oxiri ajrashib keldim</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/MKGfx9Q8/Picsart-24-12-02-21-34-25-815.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Salomu aliykum man 2008 yil man tanishish maxsadida elon joyladim turisi manga jinsiy aloqani o'rgatadigon oilasi bor erkak kirak agar sizni ayolingiz bulsa manga maslaxatiz kerak man erga tegishdan oldin sizdan maslaxat olib uzim ustimda ishlamoqchiman bulajak turmush urtog'im uchun yoqishim kirak barcha sirlarni o'rganish uchun elon joyladim </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/yYW59zZp/Picsart-24-12-02-21-38-13-594.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 manga xotini bor yegit kirak 25 30 yoshda mani o'zimni yoshim 17 da sababi man kelasi yil turmushga chiqaman uyimizga sovchilar kilayabdi erimga yoqish sirlarini o'rganmoqchiman agar manga shu temada o'rgatishni hohlasangiz mani telegramimga hozir yozing sizni kutaman</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/hvMNbDDh/Screenshot-20240914-111447-Threads.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Man 16 yosh man 18 20 yoshli yegit bilan tanishmoqchiman jiddiy maxsadda elon bermadim tag'dirimiz qo'shilgan busa balki sizni xotiniz bo'lishim mumkun faqat eltimos ajrashgan erkaklar yozmasin manga</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/DZxcx8GV/Screenshot-20240816-022402-Threads.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Salom man Kelinlikka nomzodimni qo'ydim yoshim 21 da qiz bola emas man sevgan yegitim bilan qiladigon ishni qilib quygan man shunga rozi busangiz ajrashgan yegitga busa ham tuy qilmasdan tegishga rozi man aldanib qolganimni ota onam bilishadi mani uzim aytgan man lichkamga yozing tushuntiraman uzim zamonaviy qiz man akuratni kiyinib yuraman barcha ishlar qo'limdan kiladi </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/mg0ZFwpJ/d46d66cf-203f-4979-9267-87ec541af51f-image.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Turmushimdan ajrashganman yoshim 20 da buyim 175 sm og'irligim 48 50 kg chiqaman oila qurush uchun jiddiy maxsadda elon berdim</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/YSCc0mMZ/Picsart-24-12-02-21-50-37-995.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜  👰‍♀#Келинликка_номзод
+
+📊 Параметрлари:
+       ёш -27  см-170 кг-51
+
+🇺🇿 Миллати: Oʻzbek
+
+👨‍👩‍👧‍👦 Оилавий холати: Ajrimdala
+
+🧑‍🍼Фарзанд: Bor. Qizaloq (2 yoshla)
+
+📚 Маълумоти: Oliy
+
+💰 Иш жойи: IDMTT 
+
+🤵🏻 Куёв ёш чегараси: 28-35
+
+🏪Манзил: Qoʻqon</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/mryDf9Vn/Picsart-24-12-02-21-55-35-581.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 👰‍♀#Келинликка_номзод
+
+📊 Параметрлари:
+      21 ёш - 156 см - 
+
+🇺🇿 Миллати: oʻzbek. 
+
+👨‍👩‍👧‍👦 Оилавий холати: ajragan 1 oʻgli bor
+
+📚 Маълумоти: oʻrta
+
+💰 Иш жойи: uyda
+
+🤵🏻 Куёв ёш чегараси: 30 35 gacha</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/bwXFDVfK/Picsart-24-12-02-21-58-28-522.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Salom man bu elonni berishdan maxsadim manga sexsualni yegit kerak aldangan qiz man ota onam amerikada ishlaydi man xolamni qizi bilan samarqandagi domda yashayman yoshim 18 da manga maqul kilsa uchrashmoqchiman</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/7hNHjJ4V/Picsart-24-12-02-22-01-45-364.jpg" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 ismim Nodira 23 yosh man Aldanib qolgan man ko'p joydan sovchilar kilishayabdi ammo tegolmayab man chunki qiz bola emas man mani borimcha qabul qiladigon erkakga 2 chi ruzgorga tegishga rozi man faqat mani xurmat qilsin tuy shart mas ota onam bilishadi mani aldanganimni agar sizga mani rasmim maqul kilsa manga yozing rasm o'zimniki ispot orqamda Kartinka bor </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/L4kjmy6y/7fa956fa-5172-4cf6-b0a1-128ced3685f3-image.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Elon birishdan Maxsad Men yaqinda sevgan yigitimga aldanib qoldim buni opamga aytgandim opam oyimga aytdi oyim dadamga aytgandi uyda katta janjal bo'ldi mani haydavordi endi borishga joyim yoq hozir man toshkentda ishlayab man olx dan oylik ish topgandim hozir shu ishxona birgan ayollar yotoxxonasida yotib turub yurub man mani kim borimcha qabul qila oladi adashishdim turi tan olaman bu digani foxsha jalab degani masku mani hichkim tushunmayabdi eltimos agar siz ham manga uxshagan yolg'iz erkak busangiz manga aloqaga chiqishingizni so'rayman </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/xd4Gwq5L/3666943c-a729-44a5-aac5-2d13edffc269-image.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 eltimos yaxshilab o'qib tanishing man bu elonni jiddiy maxsadda birdim yoshim 18 da aldangan qiz man hozir borishga joyim yoq mani ota onam yaqinlarim hammasi uydan chiqarib haydashdi man turi qizligimni asray olmadim uz hohshim bilan sevgan yegitim bilan yotgandim sevganimni uyidagilar bilib qolishdi hozir mani kelin qilishni hohlamayabdi yegit ham fikridan qaytti bu voqiaga 4 oy buldi dugonamni uyida yashab yurub man shu uchun sirli ravishda elon berishga majbur buldim kim qanday tushunadi uzi biladi rasmdagi uzimni rasmim</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/j5CTj3yG/513f1022-2678-45ea-bbf0-4d420a859b88-image.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Assalomu alaykum yxshimisiz ismim Guli 20 yoshda man Qashqadaryolik mani hichkimim yoq xolamni qo'lida katta bo'lgan man yaqinda xolam oila qurdi eri juda yomon menga tegajonlik qilishga xarakat qilayabdi ko'z qarashi juda yamon xar kun janjal xich tenchlik yoq man tuydim bularni dastidan mani borimcha qabul qilib uziga yor qilib olib kita oladigon bola bormi mayli manga tuy puy shart mans faqat xatim qilib olib kitsangizam rozi man shu roziviy fudbolkadagi uzimni rasmim shu qiz man man </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/VL5w1kjD/90f46990-a0a0-4566-a6f9-63b73a14b472-image.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Salom men 16 yosh man tug'ma qiz bola emas man mani shu turushimcha qabul qiladigon inson kerak manga shunaqa inson bormi oila qurmoqchiman 17 yoshga tulganimgacha gaplashib bir birimizni yaqindan bilishni hohlayman </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/Vv959Lkx/1a3bff08-e050-4636-bbd1-c099b50acbd5-image.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 ismim Sarvinoz 19 yosh man aldangan qiz man borimcha qanday bo'lsam shunday legimcha qabul qilgan inson bilan oila qurush uchun elon joyladim ko'k rangli kiyimdagi qiz man agar sizga maqul kilsam mani lichkamga xabar yozing sizni kutaman </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/zv26cTvK/3ae32946-a095-471e-9e62-84f783033c58-image.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Салом алиейком ман 19 ёш исмим Гавхар алданган ман турмушга чикмаган киз ман хозир опам билан Россия ишлаб йуриб ман тури оела куруш учун элон бирябман</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/WtR6z4fx/2519de76-e6c3-4fd6-b68f-512dab2bd5a5-image.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Исмим Гули 20 ёш андижонлик ман оела куруб ажрашган ман Фарзандим ю ижарада яшайман 4 та киз билан тураман тошкент шахарта заводда ишлайман 2 рузгорга тегаман агар барча шароетларимни килиб берса рози ман</p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/3NP5wgh7/3a0b85c7-6a9d-4c8e-97d3-4ba8064fedf1-image.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Ismim Farida 18 yosh man buxoro viloyatidan man millatim tojik xozirda toshkentda yashaymiz oila qurmagan qiz man aybim bor uzimni lichkamga yozing bu jamoat joyida oshkor qilolmayman </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/JnwV5NgF/52a09d8f-ce2c-4192-91ed-a25dfe46acec-image.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 салом мен Рухшона 2006 йил киз бола ман яшаш манзилим тошкент турмушга чикмокчиман узимга 26 30 ёшли йигит излаябман </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
+                    `
+                    <div class="profile-image">
+                        <img src="https://i.postimg.cc/3RW9SN4D/7a55f045-7efc-4a0d-b8e7-538f906ca689-image.png" alt="Profil rasmi">
+                    </div>
+                    <div class="details">
+                        <p>💜 Kamola man 20 yosh turmushdan ajrashgan qiz man bazi sabablarga ko'ra turmushim uxshamadi xali xam qiz bola man mayli rozi man 2 chi turmush qurushga  </p>
+                    </div>
+                    <div class="button">
+                        <a href="https://www1.affhone.fyi/click?pid=81683&offer_id=25" target="_blank">Send Messages</a>
+                    </div>
+                    `,
                     `
                     <div class="profile-image">
                         <img src="https://cdn5-images.motherlessmedia.com/images/A7C54C5.jpg" alt="Profil rasmi">
@@ -762,7 +1166,7 @@
                 ];
 
                 function showAnnouncement(text) {
-                    const announcementElement = document.querySelector('.announcement');
+                    const announcementElement = document.getElementById('announcement');
                     announcementElement.textContent = text;
                     announcementElement.style.display = "block";
                     setTimeout(() => {
@@ -824,37 +1228,36 @@
                 });
 
                 // Touch hodisalarini boshqarish
-                let startY; // Boshlang'ich Y nuqtasi
-                let endY; // Tugash Y nuqtasi
-                let startX; // Boshlang'ich X nuqtasi
-                let endX; // Tugash X nuqtasi
+                let startY; 
+                let endY; 
+                let startX; 
+                let endX; 
 
                 document.addEventListener('touchstart', (event) => {
-                    startY = event.touches[0].clientY; // Boshlanish nuqtasi
-                    startX = event.touches[0].clientX; // Boshlanish nuqtasi
+                    startY = event.touches[0].clientY; 
+                    startX = event.touches[0].clientX; 
                 });
 
                 document.addEventListener('touchmove', (event) => {
-                    endY = event.touches[0].clientY; // Harakat paytida nuqtani yangilash
-                    endX = event.touches[0].clientX; // Harakat paytida nuqtani yangilash
+                    endY = event.touches[0].clientY; 
+                    endX = event.touches[0].clientX; 
                 });
 
                 document.addEventListener('touchend', () => {
-                    if (Math.abs(endY - startY) > 50) { // Pastga yoki yuqoriga siljish
+                    if (Math.abs(endY - startY) > 50) { 
                         if (endY > startY) {
-                            moveProfile('down'); // Pastga
+                            moveProfile('down'); 
                         } else {
-                            moveProfile('up'); // Yuqoriga
+                            moveProfile('up'); 
                         }
-                    } else if (Math.abs(endX - startX) > 50) { // Chapga yoki o'ngga siljish
+                    } else if (Math.abs(endX - startX) > 50) { 
                         if (endX > startX) {
-                            moveProfile('right'); // O'ngga
+                            moveProfile('right'); 
                         } else {
-                            moveProfile('left'); // Chapga
+                            moveProfile('left'); 
                         }
                     }
                 });
-
             </script>
         </div>
     </div>
